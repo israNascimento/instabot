@@ -1,0 +1,11 @@
+{
+  "name": "web_bot",
+  "version": "1.0.0",
+  "description": "A instagram bot to identify if the comments of a photo are positive or negative",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Israel Nascimento",
+  "license": "ISC"
+}
