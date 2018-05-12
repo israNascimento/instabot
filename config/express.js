@@ -1,4 +1,6 @@
 const app = require("express")();
+const load = require("express-load");
+
 
 module.exports = function() {    
     app.engine('.html', require('ejs').__express);
@@ -7,5 +9,9 @@ module.exports = function() {
     app.set('view engine', 'ejs');
 
     app.listen(3000);
+
+    load("routes", {cwd: 'app',verbose:false})
+        .into(app);
+
     return app;
 }

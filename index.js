@@ -1,5 +1,8 @@
 const app = require("./config/express")();
+const result = require('dotenv').config();
 
-app.get("/", (req, res) => {
-    res.render("home");
-});
+if (result.error) {
+    throw result.error
+  }
+  
+  console.log(result.parsed)
