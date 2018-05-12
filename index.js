@@ -1,10 +1,5 @@
-const http = require("http");
+const app = require("./config/express")();
 
-const server = http.createServer(function(req, res) {
-    res.write("Ola mundo!");
-    res.end();
-});
-
-server.listen(3000, function() {
-    console.log("Hello World!");
+app.get("/", (req, res) => {
+    res.render("home");
 });
